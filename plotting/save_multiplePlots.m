@@ -24,6 +24,7 @@ for i = 1:numel(figs)
     
     % Save PDF
     if options.pdf
+        try
         %Make a copy so that size adjustments are not saved in FIG
         f = figure('Position',figs(i).Position);
         copyobj(figs(i).Children,f); 
@@ -45,6 +46,9 @@ for i = 1:numel(figs)
         orient(f,'landscape'); 
         set(f,'PaperUnits','normalized');%,'PaperPosition',[0,0,1,1]);
         print(f,savename,'-dpdf','-painters','-r0','-bestfit');    %Save vector for work in Illustrator
+        catch err
+            warning(err.message);
+        end
     end
     
     %Save as MATLAB .FIG file
