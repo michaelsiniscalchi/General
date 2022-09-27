@@ -6,7 +6,7 @@
 %   
 %
 %---------------------------------------------------------------------------------------------------
-function h = plot_basicBox( X, data, boxWidth, lineWidth, color, transparency )
+function p = plot_basicBox( X, data, boxWidth, lineWidth, color, transparency )
 
 % Arg Check
 if nargin<6
@@ -29,5 +29,3 @@ ln(3) = plot([l r]',[med med]','-','Color',color); %High Whisker
 
 p.FaceAlpha = transparency;
 set(ln(:),'LineWidth',lineWidth);
-
-h = gca;

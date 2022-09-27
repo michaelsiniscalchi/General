@@ -12,9 +12,14 @@ for i = 1:numel(figs)
     % Set CreateFcn callback
     figs(i).CreateFcn = 'set(gcbo,''Visible'',''on'')';
     
+    %Create directory if necessary
+    if ~exist(save_path,"dir")
+        mkdir(save_path);
+    end
+
     % Save PNG
     savename = fullfile(save_path,figs(i).Name);
-    print(figs(i),savename,'-dpng');    %Save PNG
+    exportgraphics(figs(i),[savename '.png']); %Save PNG
     
     % Save SVG
     if options.svg
