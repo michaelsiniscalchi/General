@@ -22,7 +22,8 @@ switch name
         %Spock
         disp(['Using HOSTNAME: ' name]);
         dirs.root = fullfile('jukebox','Bezos','Michael','_network batch');
-        dirs.code = fullfile('jukebox','Bezos','Michael','_code');
+%         dirs.code = fullfile('jukebox','Bezos','Michael','_code');
+dirs.code = fullfile('cup.pni.princeton.edu','Bezos-center','Michael','_code');
 end
 
 disp(['   Root: ' dirs.root]);
