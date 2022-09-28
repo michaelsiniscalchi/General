@@ -1,9 +1,11 @@
 function dirs = getRoots()
 
-name = getenv('COMPUTERNAME');
+disp('Getting root and code directories...');
 
+name = getenv('COMPUTERNAME');
 if isempty(name)
     %For Linux clusters
+    disp('No COMPUTERNAME found.')
     name = getenv('HOSTNAME');
 end
 
@@ -18,6 +20,10 @@ switch name
         dirs.code = fullfile('C:','Users','mjs20','Documents','GitHub');
     case 'spock-login.pni.Princeton.EDU'
         %Spock
+        disp(['Using HOSTNAME: ' name]);
         dirs.root = fullfile('jukebox','Bezos','Michael','_network batch');
         dirs.code = fullfile('jukebox','Bezos','Michael','_code');
 end
+
+disp(['   Root: ' dirs.root]);
+disp(['   Code: ' dirs.code]);
