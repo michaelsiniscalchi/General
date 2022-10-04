@@ -5,8 +5,7 @@ disp('Getting root and code directories...');
 name = getenv('COMPUTERNAME');
 if isempty(name)
     %For Linux clusters
-    disp('No COMPUTERNAME found.')
-    name = getenv('HOSTNAME');
+    name = getenv('SLURM_CLUSTER_NAME');
 end
 
 switch name
@@ -18,12 +17,10 @@ switch name
         %PNI Desktop
         dirs.root = fullfile('C:','Data');
         dirs.code = fullfile('C:','Users','mjs20','Documents','GitHub');
-    case 'spock-login.pni.Princeton.EDU'
+    case 'spock'
         %Spock
-        disp(['Using HOSTNAME: ' name]);
         dirs.root = fullfile('/jukebox','Bezos','Michael','_network batch');
         dirs.code = fullfile('/jukebox','Bezos','Michael','_code');
-        % dirs.code = fullfile('cup.pni.princeton.edu','Bezos-center','Michael','_code');
 end
 
 disp(['   Root: ' dirs.root]);
