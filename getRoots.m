@@ -7,6 +7,7 @@ if isempty(name)
     %For Linux clusters
     name = getenv('SLURM_CLUSTER_NAME');
 end
+disp(['Host: ' name]);
 
 switch name
     %Home PC
