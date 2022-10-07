@@ -20,7 +20,7 @@ switch name
         dirs.code = fullfile('C:','Users','mjs20','Documents','GitHub');
     case 'spock'
         %Spock
-        dirs.root = fullfile('/jukebox','Bezos','Michael','_network batch');
+        dirs.root = fullfile('/jukebox','Bezos','Michael','_network_batch');
         dirs.code = fullfile('/jukebox','Bezos','Michael','_code');
 end
 
