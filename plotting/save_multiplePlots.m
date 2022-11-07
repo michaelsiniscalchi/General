@@ -1,4 +1,4 @@
-function save_multiplePlots(figs,save_path,varargin)
+function save_multiplePlots( figs, save_path, varargin )
 
 opt_names = varargin;
 options = parseOptions(opt_names);
