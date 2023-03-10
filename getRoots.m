@@ -16,7 +16,6 @@ switch name
         dirs.code = fullfile('J:','Documents','GitHub');
     case 'PNI-F4W2YM2'
         %PNI Desktop
-        %         dirs.root = fullfile('C:','Data');
         dirs.code = fullfile('C:','Users','mjs20','Documents','GitHub');
         dirs.root = fullfile('X:','michael');
         case 'spock'

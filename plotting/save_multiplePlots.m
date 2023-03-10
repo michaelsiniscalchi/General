@@ -18,7 +18,7 @@ for i = 1:numel(figs)
     end
 
     % Save PNG
-    savename = fullfile(save_path,figs(i).Name);
+    savename = fullfile(save_path, figs(i).Name);
     exportgraphics(figs(i),[savename '.png']); %Save PNG
     
     % Save SVG
@@ -57,7 +57,7 @@ for i = 1:numel(figs)
     end
     
     %Save as MATLAB .FIG file
-    savefig(figs(i),savename);
+    savefig(figs(i), savename, 'compact');
 end
 close all;
 
