@@ -57,6 +57,7 @@ for i = 1:numel(figs)
     end
     
     %Save as MATLAB .FIG file
+    disp(['Saving FIG file:' savename]);
     savefig(figs(i), savename, 'compact');
 end
 close all;
