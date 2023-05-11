@@ -9,7 +9,7 @@
 function addGitRepo(dirs, varargin)
 
 for i = 1:numel(varargin)
-    repo_directory = fullfile(dirs.code,varargin{i});
+    repo_directory = fullfile(dirs.code, varargin{i});
     if exist(repo_directory,"dir")
     addpath(genpath(repo_directory));
     rmpath(genpath(fullfile(repo_directory,'.git')));
