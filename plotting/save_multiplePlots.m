@@ -1,5 +1,7 @@
 function save_multiplePlots( figs, save_path, varargin )
 
+%FUTURE EDITS: options for FontSize and output size (in or cm)
+
 opt_names = varargin;
 options = parseOptions(opt_names);
 
