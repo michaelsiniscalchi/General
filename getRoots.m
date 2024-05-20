@@ -12,7 +12,8 @@ disp(['Host: ' name]);
 switch name
     %Home PC
     case 'STELLATE'
-        dirs.root = fullfile('J:','Data & Analysis');
+%         dirs.root = fullfile('J:','Data & Analysis');
+        dirs.root = fullfile('X:','michael');
         dirs.code = fullfile('J:','Documents','GitHub');
     case 'PNI-F4W2YM2'
         %PNI Desktop
