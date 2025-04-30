@@ -16,10 +16,14 @@ switch name
         dirs.root = fullfile('X:','michael');
         dirs.code = fullfile('J:','Documents','GitHub');
     case 'PNI-F4W2YM2'
-        %PNI Desktop
+        %Olde PNI Desktop
         dirs.code = fullfile('C:','Users','mjs20','Documents','GitHub');
         dirs.root = fullfile('X:','michael');
-        case 'spock'
+    case 'PNI-1S7LK74'
+        %New PNI Desktop
+        dirs.code = fullfile('C:','Users','mjs20','Documents','GitHub');
+        dirs.root = fullfile('X:','michael');
+    case 'spock'
         %Spock
         dirs.root = fullfile('/jukebox','witten','michael');
         dirs.code = fullfile('/jukebox','Bezos','michael','_code');
