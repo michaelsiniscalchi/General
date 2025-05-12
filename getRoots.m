@@ -27,6 +27,10 @@ switch name
         %Spock
         dirs.root = fullfile('/jukebox','witten','michael');
         dirs.code = fullfile('/jukebox','Bezos','michael','_code');
+    case 'scotty'
+        %Scotty
+        dirs.root = fullfile('/jukebox','witten','michael');
+        dirs.code = fullfile('/jukebox','Bezos','michael','_code');
 end
 
 disp(['   Root: ' dirs.root]);
