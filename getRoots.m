@@ -7,6 +7,12 @@ if isempty(name)
     %For Linux clusters
     name = getenv('SLURM_CLUSTER_NAME');
 end
+
+if isempty(name)
+    %For Scotty
+    name = getenv('HOSTNAME');
+end
+
 disp(['Host: ' name]);
 
 switch name
@@ -23,12 +29,8 @@ switch name
         %New PNI Desktop
         dirs.code = fullfile('C:','Users','mjs20','Documents','GitHub');
         dirs.root = fullfile('X:','michael');
-    case 'spock'
-        %Spock
-        dirs.root = fullfile('/jukebox','witten','michael');
-        dirs.code = fullfile('/jukebox','Bezos','michael','_code');
-    case 'scotty'
-        %Scotty
+    case {'spock', 'scotty.pni.princeton.edu'}
+        %Spock & Scotty: code on Bezos server
         dirs.root = fullfile('/jukebox','witten','michael');
         dirs.code = fullfile('/jukebox','Bezos','michael','_code');
 end
