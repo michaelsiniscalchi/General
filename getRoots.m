@@ -8,8 +8,8 @@ if isempty(name)
     name = getenv('SLURM_CLUSTER_NAME');
 end
 
-if isempty(name)
-    %For Scotty
+if isempty(name) || strcmp(name,'(null)')
+    %For Scotty or New Spock
     name = getenv('HOSTNAME');
 end
 
