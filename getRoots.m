@@ -6,8 +6,10 @@ name = getenv('COMPUTERNAME');
 if isempty(name)
     %For Linux clusters
     name = getenv('HOSTNAME');
+    if regexp(name,'spock')
+        name = 'spock';
+    end
 end
-
 disp(['Host: ' name]);
 
 switch name
@@ -24,7 +26,7 @@ switch name
         %New PNI Desktop
         dirs.code = fullfile('C:','Users','mjs20','Documents','GitHub');
         dirs.root = fullfile('X:','michael');
-    case {'spockmk2-loginvm.pni.princeton.edu', 'scotty.pni.princeton.edu'}
+    case {'spock', 'scotty.pni.princeton.edu'}
         %Spock & Scotty: code on Bezos server
         dirs.root = fullfile('/jukebox','witten','michael');
         dirs.code = fullfile('/jukebox','Bezos','michael','_code');
