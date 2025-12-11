@@ -20,7 +20,7 @@ for i = 1:numel(figs)
     end
 
     % Save PNG
-    savename = fullfile(save_path, figs(i).Name);
+    savename = char(fullfile(save_path, figs(i).Name)); %char in case of string pathnames
     exportgraphics(figs(i),[savename '.png']); %Save PNG
     
     % Save SVG
